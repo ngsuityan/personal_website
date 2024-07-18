@@ -189,6 +189,9 @@ document.addEventListener("DOMContentLoaded", function () {
         date: "Jul 18, 2024",
         category: "Introduction",
         content: `
+                <div class="blog-image">
+                    <img src="./assets/images/blog-1.png" alt="Welcome To NSY Blog!" style="width: 100%; height: auto;">
+                </div>
                 <p class='blog-text'>Hello and welcome to my blog! My name is Ng Suit Yan, and I'm thrilled to have you here. I'm a software developer and an online seller passionate about creating and sharing unique content that reflects my interests and experiences.</p>
                 <br><h4 class="h4 blog-item-title">About Me</h4>
                 <p class='blog-text'>I started my journey in software development with a strong interest in HTML, CSS, JavaScript, and PHP. Over the years, I have honed my skills and worked on various projects, including a published research study on using MCDM for e-voting. Aside from my professional life, I have a deep love for collecting and selling miniature keychains and Gacha from Japan.</p>
