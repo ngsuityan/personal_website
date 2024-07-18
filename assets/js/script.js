@@ -182,13 +182,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function loadFullBlogContent(blogId) {
-    // This is just an example. Replace with actual content loading logic.
+
     const blogContent = {
       1: {
-        title: "Design conferences in 2022",
-        date: "Feb 23, 2022",
-        category: "Design",
-        content: "<p class='blog-text'>Full content of the blog post about design conferences in 2022.</p>"
+        title: "Welcome to My Blog!",
+        date: "Jul 18, 2024",
+        category: "Introduction",
+        content: `
+                <p class='blog-text'>Hello and welcome to my blog! My name is Ng Suit Yan, and I'm thrilled to have you here. I'm a software developer and an online seller passionate about creating and sharing unique content that reflects my interests and experiences.</p>
+                <br><h4 class="h4 blog-item-title">About Me</h4>
+                <p class='blog-text'>I started my journey in software development with a strong interest in HTML, CSS, JavaScript, and PHP. Over the years, I have honed my skills and worked on various projects, including a published research study on using MCDM for e-voting. Aside from my professional life, I have a deep love for collecting and selling miniature keychains and Gacha from Japan.</p>
+                <br><h4 class="h4 blog-item-title">Purpose of the Blog</h4>
+                <p class='blog-text'>I decided to start this blog to connect with like-minded individuals and share my experiences and knowledge. Whether you're interested in software development, e-commerce, or the fascinating world of miniature collectibles, you'll find something here. I'll be posting regularly, so stay tuned for fresh and engaging content.</p>
+                <br><h4 class="h4 blog-item-title">What You’ll Find Here</h4>
+                <p class='blog-text'>In this blog, you can expect to find a variety of topics, including:</p>
+                <br><ul class='blog-text'>
+                    <li>&#10686; Tips and tricks for software development</li>
+                    <li>&#10686; Insights and strategies for succeeding in e-commerce</li>
+                    <li>&#10686; Showcases of my favorite miniature keychains and Gacha</li>
+                    <li>&#10686; Personal stories and lessons learned from my journey</li>
+                </ul>
+                <br><h4 class="h4 blog-item-title">My Journey So Far</h4>
+                <p class='blog-text'>My career has been filled with exciting milestones, from successfully completing challenging projects to expanding my online business to multiple platforms like Shopee, Lazada, and 小红书. While there have been challenges along the way, each obstacle has taught me valuable lessons and helped me grow.</p>
+                <br><h4 class="h4 blog-item-title">Join Me on This Journey</h4>
+                <p class='blog-text'>I invite you to join me on this exciting journey. Feel free to leave comments, share your thoughts, and connect with me on social media. Your support and engagement mean the world to me, and I'm eager to hear about your experiences as well.</p>
+                <br><h4 class="h4 blog-item-title">Closing Remarks</h4>
+                <p class='blog-text'>Thank you for taking the time to visit my blog. I'm excited to share this journey with you and can't wait to see where it takes us. Stay tuned for my next post, where I'll dive into more specific topics and share even more insights.</p>
+            `
       },
       // Add more blog contents here
     };
@@ -196,18 +216,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const blog = blogContent[blogId];
     if (blog) {
       fullBlogContent.innerHTML = `
-        <h3>${blog.title}</h3>
-        <div class="blog-meta">
-          <p class="blog-category">${blog.category}</p>
-          <span class="dot"></span>
-          <time datetime="${blog.date}">${blog.date}</time>
-        </div>
-        ${blog.content}
-      `;
+            <h3>${blog.title}</h3>
+            <div class="blog-meta">
+                <p class="blog-category">${blog.category}</p>
+                <span class="dot"></span>
+                <time datetime="${blog.date}">${blog.date}</time>
+            </div>
+            ${blog.content}
+        `;
       blogPostsList.style.display = "none";
       fullBlogPostSection.style.display = "block";
     }
   }
+
+
 });
 
 //Hobbies
