@@ -1071,6 +1071,11 @@
           <h2 class="h2 article-title">Blog</h2>
         </header>
 
+        <!-- Search Bar -->
+        <section class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search blog posts..." />
+        </section>
+
         <section class="blog-posts">
 
           <ul class="blog-posts-list">
@@ -1103,8 +1108,6 @@
               </a>
             </li>
 
-            <!-- Add more blog-post-item here with different data-blog-id -->
-
             <li class="blog-post-item" data-blog-id="2">
               <a href="#">
 
@@ -1133,7 +1136,44 @@
               </a>
             </li>
 
+            <!-- Add more blog-post-item here with different data-blog-id -->
+            <li class="blog-post-item" data-blog-id="3">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/freelance.png"
+                    alt="Embracing a New Chapter: My Freelance Journey Begins in September" loading=" lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">General</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2024-08-23">August 23, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Embracing a New Chapter: My Freelance Journey Begins in September</h3>
+
+                  <p class="blog-text">
+                    My Freelance Journey Begins in September...
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
           </ul>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <button id="prevPageBtn">Previous</button>
+            <span id="pageIndicator">Page 1</span>
+            <button id="nextPageBtn">Next</button>
+          </div>
 
         </section>
 

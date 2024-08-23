@@ -158,89 +158,195 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-
 //Blog
 document.addEventListener("DOMContentLoaded", function () {
-  const blogPosts = document.querySelectorAll(".blog-post-item");
+  const blogPosts = [
+    {
+      id: 1,
+      title: "Welcome to My Blog!",
+      date: "Jul 18, 2024",
+      category: "Introduction",
+      image: "./assets/images/blog-1.png",
+      text: "Hello and welcome to my blog! My name is Ng Suit Yan, and I'm thrilled to have you here...",
+      content: `
+        <div class="blog-image">
+            <img src="./assets/images/blog-1.png" alt="Welcome To NSY Blog!" style="width: 100%; height: auto;">
+        </div>
+        <p class='blog-text'>Hello and welcome to my blog! My name is Ng Suit Yan, and I'm thrilled to have you here. I'm a software developer and an online seller passionate about creating and sharing unique content that reflects my interests and experiences.</p>
+        <br><h4 class="h4 blog-item-title">About Me</h4>
+        <p class='blog-text'>I started my journey in software development with a strong interest in HTML, CSS, JavaScript, and PHP. Over the years, I have honed my skills and worked on various projects, including a published research study on using MCDM for e-voting. Aside from my professional life, I have a deep love for collecting and selling miniature keychains and Gacha from Japan.</p>
+        <br><h4 class="h4 blog-item-title">Purpose of the Blog</h4>
+        <p class='blog-text'>I decided to start this blog to connect with like-minded individuals and share my experiences and knowledge. Whether you're interested in software development, e-commerce, or the fascinating world of miniature collectibles, you'll find something here. I'll be posting regularly, so stay tuned for fresh and engaging content.</p>
+        <br><h4 class="h4 blog-item-title">What You’ll Find Here</h4>
+        <p class='blog-text'>In this blog, you can expect to find a variety of topics, including:</p>
+        <br><ul class='blog-text'>
+            <li>&#10686; Tips and tricks for software development</li>
+            <li>&#10686; Insights and strategies for succeeding in e-commerce</li>
+            <li>&#10686; Showcases of my favorite miniature keychains and Gacha</li>
+            <li>&#10686; Personal stories and lessons learned from my journey</li>
+        </ul>
+        <br><h4 class="h4 blog-item-title">My Journey So Far</h4>
+        <p class='blog-text'>My career has been filled with exciting milestones, from successfully completing challenging projects to expanding my online business to multiple platforms like Shopee, Lazada, and 小红书. While there have been challenges along the way, each obstacle has taught me valuable lessons and helped me grow.</p>
+        <br><h4 class="h4 blog-item-title">Join Me on This Journey</h4>
+        <p class='blog-text'>I invite you to join me on this exciting journey. Feel free to leave comments, share your thoughts, and connect with me on social media. Your support and engagement mean the world to me, and I'm eager to hear about your experiences as well.</p>
+        <br><h4 class="h4 blog-item-title">Closing Remarks</h4>
+        <p class='blog-text'>Thank you for taking the time to visit my blog. I'm excited to share this journey with you and can't wait to see where it takes us. Stay tuned for my next post, where I'll dive into more specific topics and share even more insights.</p>
+      `
+    },
+    {
+      id: 2,
+      title: "How to Become a Successful Online Seller",
+      date: "Aug 15, 2024",
+      category: "E-Commerce",
+      image: "./assets/images/blog-2.png",
+      text: "Starting an online selling business is a journey filled with challenges and rewards...",
+      content: `
+        <div class="blog-image">
+            <img src="./assets/images/blog-2.png" alt="Success in Online Selling" style="width: 100%; height: auto;">
+        </div>
+        <p class='blog-text'>Starting an online selling business is a journey filled with challenges and rewards. Having been an online seller since I was 19, I’ve learned valuable lessons that have shaped my success. In this post, I’ll share practical tips and strategies to help you build and grow your online business.</p>
+        <br><h4 class="h4 blog-item-title">1. Choose the Right Products</h4>
+        <p class='blog-text'>Selecting the right products is the foundation of your online business. Focus on products that align with your passion and have a proven demand in the market. I chose to sell miniature keychains and Gacha from Japan because they are unique and appeal to a niche audience.</p>
+        <br><h4 class="h4 blog-item-title">2. Understand Your Target Audience</h4>
+        <p class='blog-text'>Knowing your target audience is crucial. Conduct thorough research to understand their preferences, pain points, and shopping behavior. Tailoring your products and marketing efforts to meet their needs will increase your chances of success.</p>
+        <br><h4 class="h4 blog-item-title">3. Build a Strong Online Presence</h4>
+        <p class='blog-text'>A strong online presence is essential for attracting and retaining customers. Invest time in creating a professional website, optimizing your product listings, and engaging with your audience on social media. Platforms like Shopee, Lazada, and 小红书 have been instrumental in expanding my reach.</p>
+        <br><h4 class="h4 blog-item-title">4. Offer Excellent Customer Service</h4>
+        <p class='blog-text'>Customer service can make or break your business. Always prioritize your customers’ needs, respond to inquiries promptly, and handle any issues with care. Positive reviews and word-of-mouth recommendations are powerful tools for growing your business.</p>
+        <br><h4 class="h4 blog-item-title">5. Monitor and Adapt</h4>
+        <p class='blog-text'>The e-commerce landscape is constantly evolving. Keep an eye on market trends, customer feedback, and competitors. Be willing to adapt your strategies and offerings to stay ahead of the curve. Continuous learning and improvement are key to long-term success.</p>
+        <br><h4 class="h4 blog-item-title">Conclusion</h4>
+        <p class='blog-text'>Becoming a successful online seller requires dedication, persistence, and a willingness to learn from both successes and failures. By following these tips and staying committed to your goals, you can build a thriving online business. I’m excited to share more insights and experiences with you, so stay tuned for future posts!</p>
+      `
+    },
+    {
+      id: 3,
+      title: "Starting My Freelance Journey in September",
+      date: "August 23, 2024",
+      category: "Freelancing",
+      image: "./assets/images/freelance.png",
+      text: "As September approaches, I find myself at the cusp of an exciting new chapter...",
+      content: `
+        <div class="blog-image">
+          <img src="./assets/images/freelance.png" alt="Freelance Journey" style="width: 100%; height: auto;">
+        </div>
+        <p class='blog-text'>As September approaches, I find myself at the cusp of an exciting new chapter—starting my journey as a freelancer and working from home. After years in traditional job settings, I'm ready to embrace the flexibility and independence that freelancing offers.</p>
+        <br><h4 class="h4 blog-item-title">Why Freelancing?</h4>
+        <p class='blog-text'>The decision to transition to freelancing wasn't made lightly. It stems from my desire for more control over my work-life balance and the opportunity to pursue projects that genuinely interest me. The idea of working from home, setting my own schedule, and choosing my clients is incredibly appealing.</p>
+        <br><h4 class="h4 blog-item-title">Preparing for the Transition</h4>
+        <p class='blog-text'>To ensure a smooth transition, I've been diligently preparing. This includes setting up my workspace, researching freelance platforms, and refining my personal brand. I'm also focusing on leveraging my skills in software development and online selling to build a solid foundation for my freelance career.</p>
+        <br><h4 class="h4 blog-item-title">Challenges Ahead</h4>
+        <p class='blog-text'>While the prospect of freelancing is exciting, I’m fully aware of the challenges ahead. Stepping away from a steady paycheck and navigating the uncertainties of freelance work is daunting. However, I’m confident that with dedication, a strong work ethic, and a passion for what I do, I can overcome these hurdles.</p>
+        <br><h4 class="h4 blog-item-title">What I Hope to Achieve</h4>
+        <p class='blog-text'>In this new chapter, I aim to take on diverse projects, connect with clients from around the world, and continuously grow both personally and professionally. My goal is to build a successful freelance career that allows me to explore my creativity and make a meaningful impact through my work.</p>
+        <br><h4 class="h4 blog-item-title">Conclusion</h4>
+        <p class='blog-text'>As I embark on this journey, I’m filled with anticipation and optimism. I look forward to sharing my experiences, challenges, and successes with you through this blog. Stay tuned for more updates as I navigate the exciting world of freelancing!</p>
+      `
+    }
+    // Add more blog posts here
+  ];
+
   const blogPostsList = document.querySelector(".blog-posts-list");
   const fullBlogPostSection = document.querySelector(".full-blog-post");
   const fullBlogContent = document.querySelector(".full-blog-content");
   const backToListButton = document.querySelector(".back-to-list");
+  const searchInput = document.getElementById("searchInput");
+  const prevPageBtn = document.getElementById("prevPageBtn");
+  const nextPageBtn = document.getElementById("nextPageBtn");
+  const pageIndicator = document.getElementById("pageIndicator");
 
-  blogPosts.forEach(post => {
-    post.addEventListener("click", function (event) {
-      event.preventDefault();
-      const blogId = this.getAttribute("data-blog-id");
-      // Load the full blog content based on blogId (e.g., via AJAX or from a predefined list)
-      loadFullBlogContent(blogId);
+  let currentPage = 1;
+  const postsPerPage = 3;
+
+  // Sort posts by date in descending order
+  blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  function renderBlogPosts(posts) {
+    blogPostsList.innerHTML = posts.map(post => `
+      <li class="blog-post-item" data-blog-id="${post.id}">
+        <a href="#">
+          <figure class="blog-banner-box">
+            <img src="${post.image}" alt="${post.title}" loading="lazy">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <p class="blog-category">${post.category}</p>
+              <span class="dot"></span>
+              <time datetime="${post.date}">${post.date}</time>
+            </div>
+            <h3 class="h3 blog-item-title">${post.title}</h3>
+            <p class="blog-text">${post.text}</p>
+          </div>
+        </a>
+      </li>
+    `).join("");
+
+    const blogPostItems = document.querySelectorAll(".blog-post-item");
+    blogPostItems.forEach(post => {
+      post.addEventListener("click", function (event) {
+        event.preventDefault();
+        const blogId = this.getAttribute("data-blog-id");
+        loadFullBlogContent(blogId);
+      });
     });
+  }
+
+  function paginate(posts) {
+    const start = (currentPage - 1) * postsPerPage;
+    const end = start + postsPerPage;
+    return posts.slice(start, end);
+  }
+
+  function searchBlogPosts(query) {
+    return blogPosts.filter(post => post.title.toLowerCase().includes(query.toLowerCase()));
+  }
+
+  function updatePaginationButtons(filteredPosts) {
+    prevPageBtn.disabled = currentPage === 1;
+    nextPageBtn.disabled = currentPage === Math.ceil(filteredPosts.length / postsPerPage);
+    pageIndicator.textContent = `Page ${currentPage}`;
+  }
+
+  function updateBlogPosts() {
+    const query = searchInput.value;
+    const filteredPosts = searchBlogPosts(query);
+    const paginatedPosts = paginate(filteredPosts);
+    renderBlogPosts(paginatedPosts);
+    updatePaginationButtons(filteredPosts);
+  }
+
+  searchInput.addEventListener("input", () => {
+    currentPage = 1; // Reset to first page on search
+    updateBlogPosts();
+  });
+
+  prevPageBtn.addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      updateBlogPosts();
+    }
+  });
+
+  nextPageBtn.addEventListener("click", () => {
+    if (currentPage < Math.ceil(searchBlogPosts(searchInput.value).length / postsPerPage)) {
+      currentPage++;
+      updateBlogPosts();
+    }
   });
 
   backToListButton.addEventListener("click", function () {
     fullBlogPostSection.style.display = "none";
     blogPostsList.style.display = "grid";
+
+    // Show search bar and pagination controls again
+    searchInput.style.display = "block";
+    prevPageBtn.style.display = "inline-block";
+    nextPageBtn.style.display = "inline-block";
+    pageIndicator.style.display = "inline-block";
   });
 
   function loadFullBlogContent(blogId) {
-
-    const blogContent = {
-      1: {
-        title: "Welcome to My Blog!",
-        date: "Jul 18, 2024",
-        category: "Introduction",
-        content: `
-                <div class="blog-image">
-                    <img src="./assets/images/blog-1.png" alt="Welcome To NSY Blog!" style="width: 100%; height: auto;">
-                </div>
-                <p class='blog-text'>Hello and welcome to my blog! My name is Ng Suit Yan, and I'm thrilled to have you here. I'm a software developer and an online seller passionate about creating and sharing unique content that reflects my interests and experiences.</p>
-                <br><h4 class="h4 blog-item-title">About Me</h4>
-                <p class='blog-text'>I started my journey in software development with a strong interest in HTML, CSS, JavaScript, and PHP. Over the years, I have honed my skills and worked on various projects, including a published research study on using MCDM for e-voting. Aside from my professional life, I have a deep love for collecting and selling miniature keychains and Gacha from Japan.</p>
-                <br><h4 class="h4 blog-item-title">Purpose of the Blog</h4>
-                <p class='blog-text'>I decided to start this blog to connect with like-minded individuals and share my experiences and knowledge. Whether you're interested in software development, e-commerce, or the fascinating world of miniature collectibles, you'll find something here. I'll be posting regularly, so stay tuned for fresh and engaging content.</p>
-                <br><h4 class="h4 blog-item-title">What You’ll Find Here</h4>
-                <p class='blog-text'>In this blog, you can expect to find a variety of topics, including:</p>
-                <br><ul class='blog-text'>
-                    <li>&#10686; Tips and tricks for software development</li>
-                    <li>&#10686; Insights and strategies for succeeding in e-commerce</li>
-                    <li>&#10686; Showcases of my favorite miniature keychains and Gacha</li>
-                    <li>&#10686; Personal stories and lessons learned from my journey</li>
-                </ul>
-                <br><h4 class="h4 blog-item-title">My Journey So Far</h4>
-                <p class='blog-text'>My career has been filled with exciting milestones, from successfully completing challenging projects to expanding my online business to multiple platforms like Shopee, Lazada, and 小红书. While there have been challenges along the way, each obstacle has taught me valuable lessons and helped me grow.</p>
-                <br><h4 class="h4 blog-item-title">Join Me on This Journey</h4>
-                <p class='blog-text'>I invite you to join me on this exciting journey. Feel free to leave comments, share your thoughts, and connect with me on social media. Your support and engagement mean the world to me, and I'm eager to hear about your experiences as well.</p>
-                <br><h4 class="h4 blog-item-title">Closing Remarks</h4>
-                <p class='blog-text'>Thank you for taking the time to visit my blog. I'm excited to share this journey with you and can't wait to see where it takes us. Stay tuned for my next post, where I'll dive into more specific topics and share even more insights.</p>
-            `
-      },
-      // Add more blog contents here
-      2: {
-        "title": "How to Become a Successful Online Seller",
-        "date": "Aug 15, 2024",
-        "category": "E-Commerce",
-        "content": `
-    <div class="blog-image">
-      <img src="./assets/images/blog-2.png" alt="Success in Online Selling" style="width: 100%; height: auto;">
-    </div>
-    <p class='blog-text'>Starting an online selling business is a journey filled with challenges and rewards. Having been an online seller since I was 19, I’ve learned valuable lessons that have shaped my success. In this post, I’ll share practical tips and strategies to help you build and grow your online business.</p>
-    <br><h4 class="h4 blog-item-title">1. Choose the Right Products</h4>
-    <p class='blog-text'>Selecting the right products is the foundation of your online business. Focus on products that align with your passion and have a proven demand in the market. I chose to sell miniature keychains and Gacha from Japan because they are unique and appeal to a niche audience.</p>
-    <br><h4 class="h4 blog-item-title">2. Understand Your Target Audience</h4>
-    <p class='blog-text'>Knowing your target audience is crucial. Conduct thorough research to understand their preferences, pain points, and shopping behavior. Tailoring your products and marketing efforts to meet their needs will increase your chances of success.</p>
-    <br><h4 class="h4 blog-item-title">3. Build a Strong Online Presence</h4>
-    <p class='blog-text'>A strong online presence is essential for attracting and retaining customers. Invest time in creating a professional website, optimizing your product listings, and engaging with your audience on social media. Platforms like Shopee, Lazada, and 小红书 have been instrumental in expanding my reach.</p>
-    <br><h4 class="h4 blog-item-title">4. Offer Excellent Customer Service</h4>
-    <p class='blog-text'>Customer service can make or break your business. Always prioritize your customers’ needs, respond to inquiries promptly, and handle any issues with care. Positive reviews and word-of-mouth recommendations are powerful tools for growing your business.</p>
-    <br><h4 class="h4 blog-item-title">5. Monitor and Adapt</h4>
-    <p class='blog-text'>The e-commerce landscape is constantly evolving. Keep an eye on market trends, customer feedback, and competitors. Be willing to adapt your strategies and offerings to stay ahead of the curve. Continuous learning and improvement are key to long-term success.</p>
-    <br><h4 class="h4 blog-item-title">Conclusion</h4>
-    <p class='blog-text'>Becoming a successful online seller requires dedication, persistence, and a willingness to learn from both successes and failures. By following these tips and staying committed to your goals, you can build a thriving online business. I’m excited to share more insights and experiences with you, so stay tuned for future posts!</p>
-  `
-      }
-
-    };
-
-    const blog = blogContent[blogId];
+    const blog = blogPosts.find(post => post.id == blogId);
     if (blog) {
       fullBlogContent.innerHTML = `
             <h3>${blog.title}</h3>
@@ -253,10 +359,18 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       blogPostsList.style.display = "none";
       fullBlogPostSection.style.display = "block";
+
+      // Hide search bar and pagination controls
+      searchInput.style.display = "none";
+      prevPageBtn.style.display = "none";
+      nextPageBtn.style.display = "none";
+      pageIndicator.style.display = "none";
     }
   }
 
 
+  // Initial render
+  updateBlogPosts();
 });
 
 //Hobbies

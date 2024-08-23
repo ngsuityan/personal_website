@@ -1198,6 +1198,7 @@ main {
   color: #87ceeb;
   text-decoration: underline;
 }
+
 /*-----------------------------------*\
   #BLOG
 \*-----------------------------------*/
@@ -1337,6 +1338,48 @@ main {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #FFDB6E;
+  /* Primary color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #333;
+  /* Dark color for better visibility */
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #FFBC5E;
+  /* Secondary color */
+}
+
+.pagination span {
+  font-size: 16px;
+  color: #333;
+  /* Dark color for better visibility */
 }
 
 /*-----------------------------------*\
