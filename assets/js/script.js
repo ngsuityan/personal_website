@@ -158,6 +158,145 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+//Portfolio
+document.addEventListener("DOMContentLoaded", function () {
+  const portfolioItems = [
+    {
+      id: 1,
+      title: "Feasibility Study on using MCDM for E-Voting",
+      category: "web development",
+      image: "./assets/images/evoting.png",
+      description: "Web development<br>Google Scholar Link:https://shorturl.at/euSr3"
+    },
+    {
+      id: 2,
+      title: "Simple E-Invoice System for Internal Use",
+      category: "web development",
+      image: "./assets/images/LCL.png",
+      description: "I helped create a simple e-invoicing system for Lim Chai Lan Cleaning Services to generate their monthly customer invoices."
+    },
+    // Add all portfolio items here...
+    {
+      id: 3,
+      title: "SouthSteel Website Rebranding & Maintenance",
+      category: "web development",
+      image: "./assets/images/ssb.png",
+      description: "I assisted in rebranding and maintaining the website for Southern Steel Berhad, ensuring a modern and user- friendly design."
+    },
+    {
+      id: 4,
+      title: "Convert PDF document to Google Docs",
+      category: "docs conversion",
+      image: "./assets/images/docs1.png",
+      description: "I provided a service to convert PDFs into editable Google Docs, ensuring accurate and seamless conversions."
+    },
+    {
+      id: 5,
+      title: "Design Vibrant Flyer Design",
+      category: "design",
+      image: "./assets/images/design1.png",
+      description: "I create a vibrant flyer with the help of AI and modified using graphic design tools."
+    },
+    {
+      id: 6,
+      title: "Responsive HTML Email Template",
+      category: "html/css/js",
+      image: "./assets/images/html email template.png",
+      description: "I provide service that help to create the responsive email template that responsive and meet all requirements of the client."
+    },
+    {
+      id: 7,
+      title: "Claim Form Management System for Internal Use",
+      category: "web development",
+      image: "./assets/images/Claim Form Management System.png",
+      description: "I helped create a Claim Form Management System that help company to let their customer able to raise claim for local and oversea."
+    },
+
+  ];
+
+  const portfolioList = document.getElementById("portfolioList");
+  const prevPageBtn = document.getElementById("prevPageBtn");
+  const nextPageBtn = document.getElementById("nextPageBtn");
+  const pageIndicator = document.getElementById("pageIndicator");
+  const filterButtons = document.querySelectorAll("[data-filter-btn]");
+
+  let currentPage = 1;
+  const itemsPerPage = 9; // Adjust the number of items per page
+  let currentFilter = 'all'; // Default filter
+
+  function renderPortfolioItems(items) {
+    portfolioList.innerHTML = items.map(item => `
+      <li class="project-item active" data-filter-item data-category="${item.category}">
+        <a href="#">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="${item.image}" alt="${item.title}" loading="lazy">
+          </figure>
+          <h3 class="project-title">${item.title}</h3>
+          <p class="project-category">${item.description}</p>
+        </a>
+      </li>
+    `).join("");
+  }
+
+  function filterItems(filter) {
+    if (filter === 'all') {
+      return portfolioItems;
+    } else {
+      return portfolioItems.filter(item => item.category === filter);
+    }
+  }
+
+  function paginate(items) {
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    return items.slice(start, end);
+  }
+
+  function updatePaginationButtons(filteredItems) {
+    prevPageBtn.disabled = currentPage === 1;
+    nextPageBtn.disabled = currentPage === Math.ceil(filteredItems.length / itemsPerPage);
+    pageIndicator.textContent = `Page ${currentPage}`;
+  }
+
+  function updatePortfolioItems() {
+    const filteredItems = filterItems(currentFilter);
+    const paginatedItems = paginate(filteredItems);
+    renderPortfolioItems(paginatedItems);
+    updatePaginationButtons(filteredItems);
+  }
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      this.classList.add("active");
+      currentFilter = this.getAttribute("data-category"); // Update current filter based on data attribute
+      currentPage = 1; // Reset to the first page on filter change
+      updatePortfolioItems();
+    });
+  });
+
+  prevPageBtn.addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      updatePortfolioItems();
+    }
+  });
+
+  nextPageBtn.addEventListener("click", () => {
+    if (currentPage < Math.ceil(filterItems(currentFilter).length / itemsPerPage)) {
+      currentPage++;
+      updatePortfolioItems();
+    }
+  });
+
+  // Initial render
+  updatePortfolioItems();
+});
+
+
 //Blog
 document.addEventListener("DOMContentLoaded", function () {
   const blogPosts = [

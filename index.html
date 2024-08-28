@@ -853,28 +853,28 @@
           <ul class="filter-list">
 
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="active" data-filter-btn data-category="all">All</button>
             </li>
 
             <!-- <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
+                    <button data-filter-btn>Web design</button>
+                  </li>
+      
+                  <li class="filter-item">
+                    <button data-filter-btn>Applications</button>
+                  </li> -->
 
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li> -->
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn data-category="web development">Web development</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>HTML/CSS/JS</button>
+              <button data-filter-btn data-category="html/css/js">HTML/CSS/JS</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Docs Conversion</button>
+              <button data-filter-btn data-category="docs conversion">Docs Conversion</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Design</button>
+              <button data-filter-btn data-category="design">Design</button>
             </li>
 
           </ul>
@@ -898,12 +898,12 @@
               </li>
 
               <!-- <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li> -->
+                      <button data-select-item>Web design</button>
+                    </li>
+      
+                    <li class="select-item">
+                      <button data-select-item>Applications</button>
+                    </li> -->
 
               <li class="select-item">
                 <button data-select-item>Web development</button>
@@ -928,121 +928,25 @@
 
           </div>
 
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/evoting.png" alt="EvotingSystem" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Feasibility Study on using MCDM for E-Voting</h3>
-
-                <p class="project-category">
-                  Web development<br>
-                  Google Scholar Link:https://shorturl.at/euSr3
-                  <!-- <br>APA: Yan, N. S., & Mohamed, R. (2022). Feasibility Study on using MCDM for E-Voting.
-                  <br>Doi/Official URL: https://doi.org/10.15282/ijsecs.8.2.2022.1.0098 -->
-                </p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/LCL.png" alt="Lim Chai Lan Cleaning Services Simple Invoice System"
-                    loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Simple E-Invoice System for Internal Use</h3>
-
-                <p class="project-category">
-                  I helped create a simple e-invoicing system for Lim Chai Lan Cleaning Services to generate their
-                  monthly customer invoices.
-                </p>
-
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="web development">
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/ssb.png" alt="South Steel Website Rebranding" loading="lazy">
-                </figure>
-                <h3 class="project-title">SouthSteel Website Rebranding & Maintenance</h3>
-                <p class="project-category">
-                  I assisted in rebranding and maintaining the website for Southern Steel Berhad, ensuring a modern and
-                  user-friendly design.
-                </p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="docs conversion">
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/docs1.png" alt="Convert PDF to Google Docs" loading="lazy">
-                </figure>
-                <h3 class="project-title">Convert PDF document to Google Docs</h3>
-                <p class="project-category">
-                  I provided a service to convert PDFs into editable Google Docs, ensuring accurate and seamless
-                  conversions.
-                </p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="design">
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/design1.png" alt="Flyer Jug & Sip" loading="lazy">
-                </figure>
-                <h3 class="project-title">Design Vibrant Flyer Design</h3>
-                <p class="project-category">
-                  I create a vibrant flyer with the help of AI and modified using graphic design tools.
-                </p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="html/css/js">
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/html email template.png" alt="Email Template" loading="lazy">
-                </figure>
-                <h3 class="project-title">Responsive HTML Email Template</h3>
-                <p class="project-category">
-                  I provide service that help to create the responsive email template that responsive and meet all
-                  requirements of the client.
-                </p>
-              </a>
-            </li>
-
+          <ul class="project-list" id="portfolioList">
+            <!-- Portfolio items will be dynamically generated here -->
           </ul>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <button id="prevPageBtn">Previous</button>
+            <span id="pageIndicator">Page 1</span>
+            <button id="nextPageBtn">Next</button>
+          </div>
 
         </section>
 
       </article>
+
+
+      <!--
+        - #CERTIFICATE
+      -->
 
       <article class="certificate" data-page="certificate">
         <header>
