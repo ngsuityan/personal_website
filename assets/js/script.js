@@ -242,8 +242,31 @@ document.addEventListener("DOMContentLoaded", function () {
         <br><h4 class="h4 blog-item-title">Conclusion</h4>
         <p class='blog-text'>As I embark on this journey, I’m filled with anticipation and optimism. I look forward to sharing my experiences, challenges, and successes with you through this blog. Stay tuned for more updates as I navigate the exciting world of freelancing!</p>
       `
-    }
+    },
     // Add more blog posts here
+    {
+      "id": 4,
+      "title": "The Lesson I Learned About the Importance of a Handover Checklist",
+      "date": "August 26, 2024",
+      "category": "Workplace Tips",
+      "image": "./assets/images/handover_checklist.png",
+      "text": "I recently learned a valuable lesson about the importance of preparing a detailed handover checklist before leaving a job...",
+      "content": `
+    <div class="blog-image">
+      <img src="./assets/images/handover_checklist.png" alt="Handover Checklist" style="width: 100%; height: auto;">
+    </div>
+    <p class='blog-text'>I recently learned a valuable lesson about the importance of preparing a detailed handover checklist before leaving a job. It wasn't something I had considered crucial until an issue arose after my departure that could have resulted in serious consequences for me.</p>
+    <br><h4 class="h4 blog-item-title">My Experience</h4>
+    <p class='blog-text'>When I was preparing to leave my last job, I focused on completing my tasks but didn’t think much about creating a handover checklist. No one explicitly told me to do it, so I assumed it wasn’t necessary. However, after I left, a problem came up that made me realize how critical it is to have everything documented. It was a close call that could have ended up with me being held accountable for not completing the handover properly.</p>
+    <br><h4 class="h4 blog-item-title">Why a Handover Checklist Matters</h4>
+    <p class='blog-text'>A handover checklist ensures clear communication, accountability, and prevents important details from being overlooked. It’s not just a formality; it’s a crucial tool that protects both you and the company during any transition.</p>
+    <br><h4 class="h4 blog-item-title">What I Learned</h4>
+    <p class='blog-text'>This experience taught me that no matter how straightforward the transition seems, taking the time to prepare a thorough handover checklist is essential. It’s a small effort that can save you from big problems down the road.</p>
+    <br><h4 class="h4 blog-item-title">Conclusion</h4>
+    <p class='blog-text'>If you’re ever in a position to hand over responsibilities, don’t overlook the importance of a handover checklist. It’s a step that ensures a smooth transition and provides peace of mind. Trust me, you’ll be glad you did.</p>
+  `
+    }
+
   ];
 
   const blogPostsList = document.querySelector(".blog-posts-list");
@@ -256,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const pageIndicator = document.getElementById("pageIndicator");
 
   let currentPage = 1;
-  const postsPerPage = 3;
+  const postsPerPage = 4;
 
   // Sort posts by date in descending order
   blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
