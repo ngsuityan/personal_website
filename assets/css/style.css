@@ -1375,6 +1375,14 @@ main {
   /* Dark color for better visibility */
 }
 
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
 /*-----------------------------------*\
   #HOBBIES
 \*-----------------------------------*/

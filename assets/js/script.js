@@ -215,13 +215,13 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const portfolioList = document.getElementById("portfolioList");
-  const prevPageBtn = document.getElementById("prevPageBtn");
-  const nextPageBtn = document.getElementById("nextPageBtn");
-  const pageIndicator = document.getElementById("pageIndicator");
+  const portfolioPrevPageBtn = document.getElementById("portfolioPrevPageBtn");
+  const portfolioNextPageBtn = document.getElementById("portfolioNextPageBtn");
+  const portfolioPageIndicator = document.getElementById("portfolioPageIndicator");
   const filterButtons = document.querySelectorAll("[data-filter-btn]");
 
   let currentPage = 1;
-  const itemsPerPage = 9; // Adjust the number of items per page
+  const itemsPerPage = 6; // Adjust the number of items per page
   let currentFilter = 'all'; // Default filter
 
   function renderPortfolioItems(items) {
@@ -256,9 +256,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updatePaginationButtons(filteredItems) {
-    prevPageBtn.disabled = currentPage === 1;
-    nextPageBtn.disabled = currentPage === Math.ceil(filteredItems.length / itemsPerPage);
-    pageIndicator.textContent = `Page ${currentPage}`;
+    portfolioPrevPageBtn.disabled = currentPage === 1;
+    portfolioNextPageBtn.disabled = currentPage === Math.ceil(filteredItems.length / itemsPerPage);
+    portfolioPageIndicator.textContent = `Page ${currentPage}`;
   }
 
   function updatePortfolioItems() {
@@ -278,14 +278,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  prevPageBtn.addEventListener("click", () => {
+  portfolioPrevPageBtn.addEventListener("click", () => {
     if (currentPage > 1) {
       currentPage--;
       updatePortfolioItems();
     }
   });
 
-  nextPageBtn.addEventListener("click", () => {
+  portfolioNextPageBtn.addEventListener("click", () => {
     if (currentPage < Math.ceil(filterItems(currentFilter).length / itemsPerPage)) {
       currentPage++;
       updatePortfolioItems();
@@ -449,10 +449,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const fullBlogPostSection = document.querySelector(".full-blog-post");
   const fullBlogContent = document.querySelector(".full-blog-content");
   const backToListButton = document.querySelector(".back-to-list");
+  const audioElement = document.querySelector("audio");
   const searchInput = document.getElementById("searchInput");
-  const prevPageBtn = document.getElementById("prevPageBtn");
-  const nextPageBtn = document.getElementById("nextPageBtn");
-  const pageIndicator = document.getElementById("pageIndicator");
+  const blogPrevPageBtn = document.getElementById("blogPrevPageBtn");
+  const blogNextPageBtn = document.getElementById("blogNextPageBtn");
+  const blogPageIndicator = document.getElementById("blogPageIndicator");
 
   let currentPage = 1;
   const postsPerPage = 4;
@@ -463,7 +464,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function renderBlogPosts(posts) {
     blogPostsList.innerHTML = posts.map(post => `
       <li class="blog-post-item" data-blog-id="${post.id}">
-        <a href="#">
+        <a href="./blog/blog-${post.id}.html">
           <figure class="blog-banner-box">
             <img src="${post.image}" alt="${post.title}" loading="lazy">
           </figure>
@@ -501,9 +502,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updatePaginationButtons(filteredPosts) {
-    prevPageBtn.disabled = currentPage === 1;
-    nextPageBtn.disabled = currentPage === Math.ceil(filteredPosts.length / postsPerPage);
-    pageIndicator.textContent = `Page ${currentPage}`;
+    blogPrevPageBtn.disabled = currentPage === 1;
+    blogNextPageBtn.disabled = currentPage === Math.ceil(filteredPosts.length / postsPerPage);
+    blogPageIndicator.textContent = `Page ${currentPage}`;
   }
 
   function updateBlogPosts() {
@@ -519,14 +520,14 @@ document.addEventListener("DOMContentLoaded", function () {
     updateBlogPosts();
   });
 
-  prevPageBtn.addEventListener("click", () => {
+  blogPrevPageBtn.addEventListener("click", () => {
     if (currentPage > 1) {
       currentPage--;
       updateBlogPosts();
     }
   });
 
-  nextPageBtn.addEventListener("click", () => {
+  blogNextPageBtn.addEventListener("click", () => {
     if (currentPage < Math.ceil(searchBlogPosts(searchInput.value).length / postsPerPage)) {
       currentPage++;
       updateBlogPosts();
@@ -539,9 +540,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Show search bar and pagination controls again
     searchInput.style.display = "block";
-    prevPageBtn.style.display = "inline-block";
-    nextPageBtn.style.display = "inline-block";
-    pageIndicator.style.display = "inline-block";
+    blogPrevPageBtn.style.display = "inline-block";
+    blogNextPageBtn.style.display = "inline-block";
+    blogPageIndicator.style.display = "inline-block";
+
+    // Stop the audio
+    if (audioElement) {
+      audioElement.pause();
+      audioElement.currentTime = 0; // Reset audio to start
+    }
   });
 
   function loadFullBlogContent(blogId) {
@@ -561,9 +568,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Hide search bar and pagination controls
       searchInput.style.display = "none";
-      prevPageBtn.style.display = "none";
-      nextPageBtn.style.display = "none";
-      pageIndicator.style.display = "none";
+      blogPrevPageBtn.style.display = "none";
+      blogNextPageBtn.style.display = "none";
+      blogPageIndicator.style.display = "none";
     }
   }
 
