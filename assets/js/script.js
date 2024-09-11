@@ -262,6 +262,13 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "./assets/images/Claim Form Management System.png",
       description: "I helped create a Claim Form Management System that help company to let their customer able to raise claim for local and oversea."
     },
+    {
+      id: 8,
+      title: "Youtube Thumbnails",
+      category: "design",
+      image: "./assets/images/Thumbnails1.png",
+      description: "I helped created an eye-catching thumbnail design inspired by Cristiano Ronaldo’s Sueños Cumplidos to engage viewers and drive traffic."
+    },
 
   ];
 
