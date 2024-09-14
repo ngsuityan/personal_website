@@ -269,6 +269,13 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "./assets/images/Thumbnails1.png",
       description: "I helped created an eye-catching thumbnail design inspired by Cristiano Ronaldo’s Sueños Cumplidos to engage viewers and drive traffic."
     },
+    {
+      id: 9,
+      title: "Vibrant and Engaging Poster Design For Weekly Zumba Class",
+      category: "design",
+      image: "./assets/images/zumba poster.png",
+      description: "I designed a vibrant poster for our company's weekly Zumba class using AI and Canva."
+    },
 
   ];
 
